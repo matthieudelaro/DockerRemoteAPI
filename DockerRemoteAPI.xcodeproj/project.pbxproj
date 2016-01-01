@@ -10,6 +10,7 @@
 		AA3DDF4C1C3730A70073F6B9 /* DockerRemoteAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3DDF4B1C3730A70073F6B9 /* DockerRemoteAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA3DDF531C3730A70073F6B9 /* DockerRemoteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3DDF481C3730A70073F6B9 /* DockerRemoteAPI.framework */; };
 		AA3DDF581C3730A70073F6B9 /* DockerRemoteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DDF571C3730A70073F6B9 /* DockerRemoteAPITests.swift */; };
+		AA3DDF631C37321C0073F6B9 /* DockerRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DDF621C37321C0073F6B9 /* DockerRemoteAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		AA3DDF521C3730A70073F6B9 /* DockerRemoteAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockerRemoteAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3DDF571C3730A70073F6B9 /* DockerRemoteAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerRemoteAPITests.swift; sourceTree = "<group>"; };
 		AA3DDF591C3730A70073F6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3DDF621C37321C0073F6B9 /* DockerRemoteAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerRemoteAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				AA3DDF4B1C3730A70073F6B9 /* DockerRemoteAPI.h */,
+				AA3DDF621C37321C0073F6B9 /* DockerRemoteAPI.swift */,
 				AA3DDF4D1C3730A70073F6B9 /* Info.plist */,
 			);
 			path = DockerRemoteAPI;
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3DDF631C37321C0073F6B9 /* DockerRemoteAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +309,7 @@
 		AA3DDF5D1C3730A70073F6B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -317,12 +322,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = matthieudelaro.DockerRemoteAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		AA3DDF5E1C3730A70073F6B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
